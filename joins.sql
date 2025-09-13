@@ -38,11 +38,11 @@ FROM employee_demographics AS ed
 -- FULL OUTER JOIN employee_salary AS es
 -- ON ed.employee_id=es.employee_id;
 -- mysql doesnt support Full outer join 
--- Cross join
-select e.first_name,
+-- Cross join returns the Cartesian product of the two tables involved in the join. This means that it combines each row from the first table with every row from the second table.
+SELECT e.first_name,
   m.last_name
-from employee_demographics e
-  cross join employee_salary m;
+FROM employee_demographics e
+  CROSS JOIN employee_salary m;
 -- Self join a self join is a regular join, but the table is joined with itself.
 SELECT e.first_name AS employee,
   m.first_name AS manager
