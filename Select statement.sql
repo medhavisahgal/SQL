@@ -7,6 +7,6 @@ SELECT first_name,
     salary + 1000
 FROM parks_and_recreation.employee_salary;
 -- PEMDAS->parenthese,exponent,multiplycation,division,addition,subtraction
-SELECT distinct first_name,
+SELECT DISTINCT first_name,
     age
 FROM employee_demographics;
